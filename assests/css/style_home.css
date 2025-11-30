@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter-Regular.otf");
+}
+
+body{
+    font-family: "Inter";
+    color: #353535;
+    background-image: url("../img/BG.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}

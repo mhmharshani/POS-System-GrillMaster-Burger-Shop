@@ -1,0 +1,88 @@
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter-Regular.otf");
+}
+
+body{
+    font-family: "Inter";
+    color: black;
+    /* background-color: brown; */
+}
+
+.margin_redefined{
+    margin-left: 1% !important;
+    margin-right: 1% !important;
+    margin-top: 20px !important;
+    width: 98% !important;
+    max-width: none !important;
+    /* background-color: aquamarine; */
+}
+
+.display_area{    
+    display: flex;
+    
+}
+
+/* Nav bar - icon bar vertical */
+
+.navigation_vertical{
+    background-color: #FEFEFE;
+    width: 6%;
+    height: 100vh;
+    
+}
+
+.main_area{
+    background-color: #F6F6F6;
+    width: 74%;
+    height: 100vh;
+}
+
+.order_details{
+    background-color: #FEFEFE;
+    width: 20%;
+    height: 100vh;
+}
+
+.navigation_vertical a{
+    display: block;
+}
+
+.navigation_vertical img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    
+}
+
+.logo_img{
+    width: 70px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 10px !important;
+}
+
+#txt_search{
+    
+    border: none;
+    padding: 8px;
+}
+
+.input_area{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#button-addon2{
+    border: none;
+    background-color: #FEFEFE;
+}
+
+#button_filter{
+    border: none;
+    background-color: #FEFEFE;
+}
