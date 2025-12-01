@@ -5,7 +5,7 @@
 
 body{
     font-family: "Inter";
-    color: black;
+    color: #383F53;
     /* background-color: brown; */
 }
 
@@ -29,6 +29,7 @@ body{
     background-color: #FEFEFE;
     width: 6%;
     height: 100vh;
+    position: fixed;
     
 }
 
@@ -36,12 +37,15 @@ body{
     background-color: #F6F6F6;
     width: 74%;
     height: 100vh;
+    margin-left: 6%;
 }
 
 .order_details{
     background-color: #FEFEFE;
     width: 20%;
     height: 100vh;
+    position: fixed;
+    margin-left: 80%;
 }
 
 .navigation_vertical a{
@@ -69,6 +73,7 @@ body{
     
     border: none;
     padding: 8px;
+    font-size: 14px;
 }
 
 .input_area{
@@ -85,4 +90,83 @@ body{
 #button_filter{
     border: none;
     background-color: #FEFEFE;
+}
+
+.order_status{
+    display: flex; 
+    justify-content: end;
+    
+    color: #FEFEFE;
+    font-size: 15px;
+}
+
+.order_status label{
+    display: inline; 
+    background-color: #383F53;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.order_card{
+    background-color: #EDF0F5;
+    border: #383F53 solid 2px;
+    padding: 0px;
+    border-radius: 20px;
+}
+
+.button_category_1{
+    background-color: #383F53;
+    color: #FEFEFE;
+}
+
+.button_category_2{
+    background-color: #EDF0F5;
+    color: #383F53;
+    border-color: #383F53;
+}
+
+.button_category_3{
+    background-color: #383F53;
+    color: #FEFEFE;
+}
+
+#button_add_cart{
+    background-color: #383F53;
+    color: #FEFEFE;
+}
+
+#button_add_cart img{
+    width: 20px;
+}
+
+#item_card{
+    background-color: #EDF0F5;
+    border: #383F53 solid 1px;
+}
+
+.stock_label{
+    display: flex;
+    justify-content: end;
+}
+
+#item_image{
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.list-group-item{
+    background-color:#EDF0F5;
+}
+
+#button_payment{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    
+} 
+
+#button_payment button{
+    background-color: #383F53;
+    color: #FEFEFE;
 }
