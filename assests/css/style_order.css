@@ -1,0 +1,174 @@
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/Inter-Regular.otf");
+}
+
+body{
+    font-family: "Inter";
+    color: #383F53;
+    /* background-color: brown; */
+}
+
+.margin_redefined{
+    margin-left: 1% !important;
+    margin-right: 1% !important;
+    margin-top: 20px !important;
+    width: 98% !important;
+    max-width: none !important;
+    /* background-color: aquamarine; */
+}
+
+.display_area{    
+    display: flex;
+    
+}
+
+/* Nav bar - icon bar vertical */
+
+.navigation_vertical{
+    background-color: #FEFEFE;
+    width: 6%;
+    height: 100vh;
+    position: fixed;
+    
+}
+
+.navigation_vertical a{
+    display: block;
+}
+
+.navigation_vertical img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    
+}
+
+.main_area{
+    background-color: #F6F6F6;
+    width: 94%;
+    height: 100vh;
+    margin-left: 6%;
+}
+
+.logo_img{
+    width: 70px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 10px !important;
+}
+
+.date_time_area{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.table_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #383F53;
+    padding: 1px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+}
+.label_div{
+    display: flex;
+    width: 90%;
+}
+
+.button_div{
+    display: flex;
+    justify-content: end;
+    width: 10%;
+}
+
+.label_div label{
+    background-color: #EDF0F5;
+    padding: 5px;
+    border-radius: 20px;
+    margin-left: 10px;
+    padding-left: 10px;
+    color: #383F53;
+    font-size: 15px;
+}
+
+.button_div button{
+    background-color: #EDF0F5;
+    padding: 5px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.table_data{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #EDF0F5;
+    padding: 1px;
+    margin-bottom: 5px;
+    border-radius: 20px;
+}
+.input_data_div{
+    display: flex;
+    justify-content:start;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.input_button_div{
+    display: flex;
+    justify-content: end;
+    width: 10%;
+}
+
+.input_data_div input{
+    background-color: #FEFEFE;
+    padding: 5px;
+    border-radius: 20px;
+    margin-left: 10px;
+    padding-left: 10px;
+    border: none;
+    color: #383F53;
+    font-size: 15px;
+}
+
+.input_button_div button{
+    background-color: #EDF0F5;
+    padding: 5px;
+    border-radius: 20px;
+    margin-left: 1px;
+}
+
+/* #txt_id{
+    flex-basis: 20% !important;
+} */
+/*
+#txt_name{
+    flex-basis: 40% !important;
+}
+
+#txt_phone{
+    flex-basis: 40% !important;
+} */
+
+#txt_search{    
+    border: none;
+    padding: 8px;
+    font-size: 14px;
+}
+
+#button-addon2{
+    border: none;
+    background-color: #EDF0F5;
+}
+
+#button_filter{
+    border: none;
+    background-color: #EDF0F5;
+}
