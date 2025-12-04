@@ -171,3 +171,26 @@ body{
     border: none;
     background-color: #EDF0F5;
 }
+
+#dialog_box_customer {
+    background-color: #EDF0F5;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    color: #383F53;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* A backdrop pseudo-element covers the rest of the screen when open */
+}
+
+#dialog_box_customer::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#dialog_box_customer form div button{
+    border-radius:8px; 
+    border: #383F53 solid 1px; 
+    background-color: #F8F8F8;
+    padding: 5px;
+    color: #383F53;
+    margin-left: 10px;
+}

@@ -32,7 +32,7 @@
             <div class="main_area">
                 <div class="date_time_area">
                     <div>
-                        <h5 style="margin-top: 32px;">WELCOME DRILLMASTER</h5>
+                        <h5 style="margin-top: 32px;">WELCOME GRILLMASTER</h5>
                     </div>
                     <div style="margin-top: 15px;">
 
@@ -60,34 +60,24 @@
                 <div id="item_table">
                     <div class="table_header">
                         <div class="label_div">
-                            <label for="Item ID"  class="lbl_id" style="flex-basis: 33%;">Item ID</label>
-                            <label for="Item Name" class="lbl_name" style="flex-basis: 33%;">Item Name</label>
-                            <label for="Item Name" class="lbl_name" style="flex-basis: 33%;">Size</label>
-                            <label for="Category" class="lbl_phone" style="flex-basis: 33%;">category</label>
-                            <label for="Price" class="lbl_name" style="flex-basis: 33%;">Price</label>
-                            <label for="Discount" class="lbl_phone" style="flex-basis: 33%;">Discounts</label>
+                            <label for="Item ID"  class="lbl_id" style="flex-basis: 14.285%;">Item ID</label>
+                            <label for="Item Name" class="lbl_name" style="flex-basis: 14.285%;">Item Name</label>
+                             <label for="Category" class="lbl_category" style="flex-basis: 14.285%;">Category</label>
+                            <label for="Item Name" class="lbl_size" style="flex-basis: 14.285%;">Size</label>
+                            <label for="Price" class="lbl_price" style="flex-basis: 14.285%;">Price</label>
+                            <label for="Discount" class="lbl_discount" style="flex-basis: 14.285%;">Discounts</label>
+                            <label for="Stock" class="lbl_stock" style="flex-basis: 14.285%;">Stock</label>
                         </div>
                         <div class="button_div">
-                            <button class="btn"><img src="assests/img/icon_add_user.png" alt="" width="25px"></button>
+                            <button class="btn" id="button_add_item"><img src="assests/img/icon_add_new.png" alt="" width="25px"></button>
                         </div>
                     </div>
 
-                    <!-- Dynamically add table rows here -->
+                    <div id="table_data_div">
+                         <!-- Dynamically add table rows here -->
 
-                    <div class="table_data">
-                        <div class="input_data_div">
-                            <input type="text" id="txt_id" size="16.66%"  value="P0001" readonly >
-                            <input type="text" id="txt_name" size="16.66%" value="Classic Burger" readonly >
-                            <input type="text" id="txt_category" size="16.66%" value="Burgers" readonly>
-                            <input type="text" id="txt_size" size="16.66%" value="Large" readonly>
-                            <input type="text" id="txt_total" size="16.66%" value="700.00" readonly >
-                            <input type="text" id="txt_discount" size="16.66%" value="10%" readonly>
-                        </div>
-                        <div class="input_button_div">
-                            <button class="btn"><img src="assests/img/icon_edit.png" alt="" width="25px"></button>
-                            <button class="btn"><img src="assests/img/icon_delete.png" alt="" width="25px"></button>
-                        </div>
                     </div>
+                    
                         
                 </div>
 
@@ -97,6 +87,40 @@
         </div>
 
     </div>
+
+     <!-- Dialog box to collect item details -->
+
+    <dialog id="dialog_box_item">
+        <h2 style="font-size: 20px; text-align: center; padding-bottom: 10px;">Enter Item Details</h2>
+        <form method="dialog">
+            <label for="name" id="dlbl_name">Name         :</label>
+            <input type="text" id="dtxt_name" name="name" required style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+            
+            <label for="category" id="dlbl_category">Category :</label>
+            <input type="text" id="dtxt_category" name="category" required style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+
+            <label for="size" id="dlbl_size">Size :</label>
+            <input type="text" id="dtxt_size" name="size" required style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+
+            <label for="price" id="dlbl_price">Price :</label>
+            <input type="text" id="dtxt_price" name="price" required style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+
+            <label for="discount" id="dlbl_discount">Discounts :</label>
+            <input type="text" id="dtxt_discount" name="discount" required style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+
+            <label for="stock" id="dlbl_stock">Stock :</label>
+            <input type="text" id="dtxt_stock" name="stock" required style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+            
+            <!-- The button with value="cancel" automatically closes the dialog -->
+             <div style="display: flex; justify-content: end;">
+                <button value="cancel" id="cancel_button">Cancel</button>
+                <button id="save_button" type="submit">Save</button>
+             </div>
+            
+        </form>
+    </dialog>
+
+    <!-- ------------------------------------------ -->
 
 
 
@@ -108,7 +132,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <script src="assests/js/app_customer.js"></script>
+    <script src="assests/js/app_item.js"></script>
 </body>
 
 </html>
