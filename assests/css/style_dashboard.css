@@ -36,7 +36,7 @@ body{
 .main_area{
     background-color: #F6F6F6;
     width: 74%;
-    height: 100vh;
+    /* height: 100vh; */
     margin-left: 6%;
 }
 

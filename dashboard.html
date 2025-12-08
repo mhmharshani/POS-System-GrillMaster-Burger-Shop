@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DrillMaster POS System</title>
+    <title>GrillMaster POS System</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="assests/css/style_dashboard.css">
@@ -167,7 +167,7 @@
                     <div class="card-body">
                         <div style="display: flex; justify-content: space-between;">
                             <label for="">Order ID </label>
-                            <label for="" style="padding-bottom: 8px;">ODR0001</label>
+                            <label for="" style="padding-bottom: 8px;" id="txt_order_id">ODR0001</label>
                         </div>
                         <div style="display: flex; justify-content: space-between;">
                             <label for="">Cust. Name </label>
@@ -191,21 +191,21 @@
                     <div class="card-body">
                         <div style="display: flex; justify-content: space-between;">
                             <label for="">Sub Total </label>
-                            <label for="" style="padding-bottom: 8px;">2500.00</label>
+                            <label for="" style="padding-bottom: 8px;" id="txt_sub_total">2500.00</label>
                         </div>
                         <div style="display: flex; justify-content: space-between;">
                             <label for="">Discounts </label>
-                            <label for="" style="padding-bottom: 8px;">0.00</label>
+                            <label for="" style="padding-bottom: 8px;" id="txt_discount">0.00</label>
                         </div>
                         <div style="display: flex; justify-content: space-between;">
                             <label for=""><b>Grand Total</b> </label>
-                            <label for=""><b>2500.00</b></label>
+                            <label for="" id="txt_grand_total"><b>2500.00</b></label>
                         </div>
 
                     </div>
                 </div>
                 <div id="button_payment">
-                    <button class="btn">Place Order</button>
+                    <button class="btn" id="button_place_order">Place Order</button>
                 </div>  
 
             </div>

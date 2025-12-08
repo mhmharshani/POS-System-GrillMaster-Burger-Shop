@@ -1,0 +1,464 @@
+{
+    "items": [
+        {
+            "id": "B1001",
+            "name": "Classic Burger",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Burger",
+            "size": "Large",
+            "price": "750.00",
+            "discount": "-",
+            "stock": "22"
+        },
+        {
+            "id": "B1002",
+            "name": "Classic Burger",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Burger",
+            "size": "Regular",
+            "price": "1500.00",
+            "discount": "15",
+            "stock": "10"
+        },
+        {
+            "id": "B1003",
+            "name": "Turkey Burger",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Burger",
+            "size": "Regular",
+            "price": "1600.00",
+            "discount": "-",
+            "stock": "38"
+        },
+        {
+            "id": "B1004",
+            "name": "Chicken Burger",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Burger",
+            "size": "Large",
+            "price": "1400.00",
+            "discount": "-",
+            "stock": "40"
+        },
+        {
+            "id": "B1005",
+            "name": "Chicken Burger",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Burger",
+            "size": "Regular",
+            "price": "800.00",
+            "discount": "20",
+            "stock": "10"
+        },
+        {
+            "id": "B1006",
+            "name": "Cheese Burger",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Burger",
+            "size": "Large",
+            "price": "1000.00",
+            "discount": "-",
+            "stock": "10"
+        },
+        {
+            "id": "B1007",
+            "name": "Cheese Burger",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Burger",
+            "size": "Regular",
+            "price": "600.00",
+            "discount": "-",
+            "stock": "32"
+        },
+        {
+            "id": "B1008",
+            "name": "Bacon Burger",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Burger",
+            "size": "-",
+            "price": "650.00",
+            "discount": "15",
+            "stock": "10"
+        },
+        {
+            "id": "B1009",
+            "name": "Shawarma Burger",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Burger",
+            "size": "-",
+            "price": "800.00",
+            "discount": "-",
+            "stock": "35"
+        },
+        {
+            "id": "B1010",
+            "name": "Olive Burger",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Burger",
+            "size": "-",
+            "price": "1800.00",
+            "discount": "-",
+            "stock": "10"
+        },
+        {
+            "id": "B1011",
+            "name": "Double-Cheese Burger",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Burger",
+            "size": "-",
+            "price": "1250.00",
+            "discount": "20",
+            "stock": "10"
+        },
+        {
+            "id": "B1012",
+            "name": "Crispy Chicken Burger",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Burger",
+            "size": "Regular",
+            "price": "1200.00",
+            "discount": "-",
+            "stock": "20"
+        },
+        {
+            "id": "B1013",
+            "name": "Crispy Chicken Burger",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Burger",
+            "size": "Large",
+            "price": "1600.00",
+            "discount": "10",
+            "stock": "10"
+        },
+        {
+            "id": "B1014",
+            "name": "Paneer Burger",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Burger",
+            "size": "-",
+            "price": "900.00",
+            "discount": "-",
+            "stock": "16"
+        },
+        {
+            "id": "B1015",
+            "name": "Crispy Chicken Submarine",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Submarine",
+            "size": "Large",
+            "price": "2000.00",
+            "discount": "-",
+            "stock": "10"
+        },
+        {
+            "id": "B1016",
+            "name": "Crispy Chicken Submarine",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Submarine",
+            "size": "Regular",
+            "price": "1500.00",
+            "discount": "-",
+            "stock": "10"
+        },
+        {
+            "id": "B1017",
+            "name": "Chicken Submarine",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Submarine",
+            "size": "Large",
+            "price": "1800.00",
+            "discount": "3",
+            "stock": "30"
+        },
+        {
+            "id": "B1018",
+            "name": "Chicken Submarine",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Submarine",
+            "size": "Regular",
+            "price": "1400.00",
+            "discount": "-",
+            "stock": "10"
+        },
+        {
+            "id": "B1019",
+            "name": "Grinder Submarine",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Submarine",
+            "size": "-",
+            "price": "2300.00",
+            "discount": "-",
+            "stock": "12"
+        },
+        {
+            "id": "B1020",
+            "name": "Cheese Submarine",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Submarine",
+            "size": "-",
+            "price": "2200.00",
+            "discount": "-",
+            "stock": "25"
+        },
+        {
+            "id": "B1021",
+            "name": "Double Cheese n Chicken Submarine",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Submarine",
+            "size": "-",
+            "price": "1900.00",
+            "discount": "16",
+            "stock": "10"
+        },
+        {
+            "id": "B1022",
+            "name": "Special Horgie Submarine",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Submarine",
+            "size": "-",
+            "price": "2800.00",
+            "discount": "-",
+            "stock": "10"
+        },
+        {
+            "id": "B1023",
+            "name": "GrillMaster Special Submarine",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Submarine",
+            "size": "-",
+            "price": "3000.00",
+            "discount": "-",
+            "stock": "20"
+        },
+        {
+            "id": "B1024",
+            "name": "Steak Fries",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Fries",
+            "size": "Large",
+            "price": "1200.00",
+            "discount": "-",
+            "stock": "10"
+        },
+        {
+            "id": "B1025",
+            "name": "Steak Fries",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Fries",
+            "size": "Medium",
+            "price": "600.00",
+            "discount": "-",
+            "stock": "10"
+        },
+        {
+            "id": "B1026",
+            "name": "French Fries",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Fries",
+            "size": "Large",
+            "price": "800.00",
+            "discount": "-",
+            "stock": "20"
+        },
+        {
+            "id": "B1027",
+            "name": "French Fries",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Fries",
+            "size": "Medium",
+            "price": "650.00",
+            "discount": "-",
+            "stock": "30"
+        },
+        {
+            "id": "B1028",
+            "name": "French Fries",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Fries",
+            "size": "Small",
+            "price": "450.00",
+            "discount": "-",
+            "stock": "40"
+        },
+        {
+            "id": "B1029",
+            "name": "Sweet Potato Fries",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Fries",
+            "size": "Large",
+            "price": "600.00",
+            "discount": "-",
+            "stock": "10"
+        },
+        {
+            "id": "B1030",
+            "name": "Chicken n Cheese Pasta",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Pasta",
+            "size": "-",
+            "price": "1600.00",
+            "discount": "15",
+            "stock": "18"
+        },
+        {
+            "id": "B1031",
+            "name": "Chicken Penne Pasta",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Pasta",
+            "size": "-",
+            "price": "1700.00",
+            "discount": "-",
+            "stock": "15"
+        },
+        {
+            "id": "B1032",
+            "name": "Ground Turkey Pasta Bake",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Pasta",
+            "size": "-",
+            "price": "2900.00",
+            "discount": "10",
+            "stock": "10"
+        },
+        {
+            "id": "B1033",
+            "name": "Creamy Shrimp Pasta",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Pasta",
+            "size": "-",
+            "price": "2000.00",
+            "discount": "-",
+            "stock": "35"
+        },
+        {
+            "id": "B1034",
+            "name": "Lemon Butter Pasta",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Pasta",
+            "size": "-",
+            "price": "1950.00",
+            "discount": "-",
+            "stock": "10"
+        },
+        {
+            "id": "B1035",
+            "name": "Tagliatella Pasta",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Pasta",
+            "size": "-",
+            "price": "2400.00",
+            "discount": "1",
+            "stock": "20"
+        },
+        {
+            "id": "B1036",
+            "name": "Baked Ravioli Pasta",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Pasta",
+            "size": "-",
+            "price": "2000.00",
+            "discount": "1",
+            "stock": "10"
+        },
+        {
+            "id": "B1037",
+            "name": "Fried Chicken",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Chicken",
+            "size": "Small",
+            "price": "1200.00",
+            "discount": "-",
+            "stock": "10"
+        },
+        {
+            "id": "B1038",
+            "name": "Fried Chicken",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Chicken",
+            "size": "Regular",
+            "price": "2300.00",
+            "discount": "10",
+            "stock": "30"
+        },
+        {
+            "id": "B1039",
+            "name": "Fried Chicken",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Chicken",
+            "size": "Large",
+            "price": "3100.00",
+            "discount": "5",
+            "stock": "40"
+        },
+        {
+            "id": "B1040",
+            "name": "Hot Wings",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Chicken",
+            "size": "Large",
+            "price": "2400.00",
+            "discount": "-",
+            "stock": "30"
+        },
+        {
+            "id": "B1041",
+            "name": "Devilled Chicken",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Chicken",
+            "size": "Large",
+            "price": "900.00",
+            "discount": "-",
+            "stock": "25"
+        },
+        {
+            "id": "B1042",
+            "name": "BBQ Chicken",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Chicken",
+            "size": "Regular",
+            "price": "2100.00",
+            "discount": "-",
+            "stock": "30"
+        },
+        {
+            "id": "B1043",
+            "name": "Pepsi",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Beverages",
+            "size": "330ml",
+            "price": "990.00",
+            "discount": "5",
+            "stock": "45"
+        },
+        {
+            "id": "B1044",
+            "name": "Coca-Cola",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Beverages",
+            "size": "330ml",
+            "price": "1230.00",
+            "discount": "-",
+            "stock": "70"
+        },
+        {
+            "id": "B1045",
+            "name": "Sprite",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Beverages",
+            "size": "330ml",
+            "price": "1500.00",
+            "discount": "3",
+            "stock": "55"
+        },
+        {
+            "id": "B1046",
+            "name": "Mirinda",
+            "item_thumb": "assests/img/Burger_item.jpg",
+            "category": "Beverages",
+            "size": "330ml",
+            "price": "850.00",
+            "discount": "7",
+            "stock": "50"
+        }
+    ]
+}

@@ -1,9 +1,19 @@
 console.log("JS Loaded - Dashboard");
 
-let item_array = [];
-let order_array = [];
-let cart_array = [];
-let customer_array = [];
+let item_array=[];
+let order_array=[];
+let cart_array=[];
+let customer_array=[];
+
+let txt_order_id = document.getElementById("txt_order_id");
+
+function set_order_details(){
+    
+    let temp_order_array = JSON.parse(localStorage.getItem("order_array"));   
+    txt_order_id.innerText = generate_order_id(temp_order_array);
+}
+
+set_order_details();
 
 async function get_item_data(){
 
@@ -20,18 +30,18 @@ async function get_item_data(){
             item_array[i]=data.items[i];
         } 
         localStorage.setItem("item_array",JSON.stringify(item_array));
+        
     })
 
     load_cards("Burger");
-    
-    // console.log(localStorage.getItem("item_array"));
-    
+
 }
 
 get_item_data();
 
 let card_container = document.getElementById("item_card_container");
 
+//----------Find item names for one category-----------------
 function find_name_list(category){
     let temp_name_array=[];
     item_array.forEach(e =>{
@@ -55,14 +65,15 @@ function find_name_list(category){
 function load_cards(category){
 
     card_container.innerHTML="";
+    
     let temp_name_array = find_name_list(category);
-
+   
     temp_name_array.forEach(name =>{           
         for(let i=0;i<item_array.length;i++){
             if(item_array[i].name===name){
                 
                 card_container.innerHTML += `<div class="col">
-                        <div class="card h-80" style="max-width: 540px;" id="item_card">
+                        <div class="card h-80" style="max-width: 540px;" id=${"item-card-"+item_array[i].id}>
                             <div class="row g-0">
                                 <div class="col-md-4">
                                     <img src="assests/img/Burger_item.jpg"
@@ -77,28 +88,37 @@ function load_cards(category){
 
                                         <h6 class="card-title">${item_array[i].name}</h6>
                                        
-                                        <select id="size_dd" name="size" style="background-color: #FEFEFE; margin-bottom: 20px; font-size: 14px; border: none; padding: 8px; border-radius: 10px; font-family: Inter; color: #383F53;">
-                                            <option value=${item_array[i].size} selected >${item_array[i].size}</option>
+                                        <select id=${item_array[i].id} name="size" class="size_dd" style="background-color: #FEFEFE; margin-bottom: 20px; font-size: 14px; border: none; padding: 8px; border-radius: 10px; font-family: Inter; color: #383F53;">
+                                            <option value="0" selected >${item_array[i].portion[0]}</option>
                                             
                                         </select>
 
                                         <div style="display: flex; justify-content: space-around;">
                                             <p class="card-text fw-bold"><small
-                                                class="text-body-secondary">Rs. <span id="price_tag" >${item_array[i].price}</span></small></p>
+                                                class="text-body-secondary">Rs. <span id="price_tag" >${item_array[i].price[0]}</span></small></p>
                                             <div class="quantity-control">  
                                                 <input type="number" id="quantity" value="0" min="0" max="10" step="1">    
                                             </div>
                                         </div>
                                         <div class="stock_label">
-                                            <label for="" style="font-size: 12px;">In Stock -<span id="stock_tag">${item_array[i].stock}</span></label>
+                                            <label for="" style="font-size: 12px;">In Stock -<span id="stock_tag">${item_array[i].stock[0]}</span></label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>`;
+                
+
+                let size_dd = document.getElementById(item_array[i].id);
+                for(let j=1;j<item_array[i].portion.length;j++){
+                    size_dd.innerHTML += `<option value="${j}">${item_array[i].portion[j]}</option>`;
+                }
                 break;
+                
             }
+
+            
         }
                 
     })
@@ -112,12 +132,15 @@ let btn_chicken = document.getElementById("button_chicken");
 let btn_fries = document.getElementById("button_fries");
 let btn_beverage = document.getElementById("button_beverage");
 
+
+
 btn_burger.addEventListener("click", e =>{
     load_cards("Burger");
 });
 
 btn_submarine.addEventListener("click", e =>{
     load_cards("Submarine");
+    
 });
 
 btn_pasta.addEventListener("click", e =>{
@@ -136,11 +159,16 @@ btn_beverage.addEventListener("click", e =>{
     load_cards("Beverages");
 });
 
-let button_cart = document.getElementById("button_add_cart");
+//------------------------ok----------------------------------
 
-card_container.addEventListener("click", function(event){
+//--------------------Set order id------------------
 
-    const clicked_cart = event.target.closest("#button_add_cart");
+let cart_list_item_array=[];
+let cart_total=0;
+
+card_container.addEventListener("click", function(event){    
+    
+    const clicked_cart = event.target.closest("#button_add_cart");  
 
     if(clicked_cart!=null){
         let clicked_card = clicked_cart.offsetParent;
@@ -149,8 +177,8 @@ card_container.addEventListener("click", function(event){
         const title = clicked_card.querySelector(".card-title").innerText;
         console.log(title);
 
-        const size = clicked_card.querySelector("#size_dd").value;
-        console.log(size);
+        const portion = clicked_card.querySelector(".size_dd").selectedOptions[0].innerText;
+        console.log(portion);
 
         let qty = clicked_card.querySelector("#quantity").value;
         if(qty==="0"){
@@ -159,13 +187,11 @@ card_container.addEventListener("click", function(event){
         }
         console.log(qty);
 
-        // const stockInit = clicked_card.querySelector("#stock_tag").innerText;
-        // let stock = ""+(Number(stock)-Number(qty));
-        // console.log(stock);
-        // clicked_card.querySelector("#stock_tag").innerText = stock;
-
         const price = clicked_card.querySelector("#price_tag").innerText;
         console.log(price);
+
+        const discount = clicked_card.querySelector("#price_tag").innerText;
+
 
         //---------------------------------------------------------------
 
@@ -173,7 +199,7 @@ card_container.addEventListener("click", function(event){
         cart_item.innerHTML +=`<li class="list-group-item d-flex justify-content-between align-items-start margin-bottom: 0px; margin-right:5px; margin-left:0px">
                             <div class="ms-2 me-auto mb-0">
                                 <div class="fw-bold" id="title">${title}</div>
-                                <p style="margin-bottom: 5px;" id="size">${size}</p>
+                                <p style="margin-bottom: 5px;" id="size">${portion}</p>
                                 <div style="display: flex; justify-content: start;">
                                     <p>Rs.<span id="unit_price">${price}</span></p>
                                     <div class="quantity-control">  
@@ -184,20 +210,153 @@ card_container.addEventListener("click", function(event){
                             </div>
                             
                         </li>`;
-
-        // <span class="badge rounded-pill" style="background-color:#383F53;">NEW</span>
-
-        let cart_data ={
+                        // <span class="badge rounded-pill" style="background-color:#383F53;">NEW</span>
+        
+        let cart_list_item ={
             "name": title,
-            "size": size,
+            "size": portion,
             "price": price,
+            "discount": discount,
             "quantity": qty 
         }
 
+        cart_list_item_array.push(cart_list_item);
+        let total = 0;
+        
+        let sub_total= document.getElementById("txt_sub_total");
+        let disc = document.getElementById("txt_discount");
+        let grand_total = document.getElementById("txt_grand_total");
+
+        cart_list_item_array.forEach(item =>{
+            total += (item.quantity*item.price);
+        })
+        sub_total.innerText = total;
+        grand_total.innerText = total;
+
+        cart_total = total;
     }
 
     
+});
+
+//---------------price and stock change as per Drop down change---------------------
+
+card_container.addEventListener("change", function(event){
+
+    let clicked_select = event.target;
+    let drop_down_id = clicked_select.id;
+    console.log(event.target);
+
+    let clicked_card = clicked_select.offsetParent;
+    
+
+    item_array.forEach(item =>{
+        if(item.id === drop_down_id){
+            clicked_card.querySelector("#price_tag").innerText = item.price[event.target.value];
+            clicked_card.querySelector("#stock_tag").innerText = item.stock[event.target.value];
+        }
+    })
+    
+    
 })
+
+console.log(order_array);
+
+
+function generate_order_id(order_array){
+    if(order_array.length==0){
+        return "ODR0001";
+    }
+    else{
+        let order_id = order_array[order_array.length-1].id;
+        let num= Number(order_id.substring(3,7));          
+        return "ODR"+String(num+1).padStart(4,'0');
+    }
+}
+
+function generate_cart_id(){
+    if(cart_array.length==0){
+        return "CT0001";
+    }
+    else{
+        let cart_id = cart_array[cart_array.length-1].id;
+        let num= Number(cart_id.substring(2,6));          
+        return "CT"+String(num+1).padStart(4,'0');
+    }
+}
+
+
+
+let btn_place_order = document.getElementById("button_place_order");
+
+btn_place_order.addEventListener("click", e =>{
+
+    console.log("clicked place order btn");
+
+    //------------------------------------
+    if(localStorage.getItem("order_array")!=null){
+        order_array = JSON.parse(localStorage.getItem("order_array"));   
+        localStorage.removeItem("order_array");
+    }
+
+    if(localStorage.getItem("cart_array")!=null){
+        cart_array = JSON.parse(localStorage.getItem("cart_array"));   
+        localStorage.removeItem("cart_array");
+    }
+
+    //--------------------------------------
+    
+    let cart_id = generate_cart_id();
+    let cart ={
+        "id" : cart_id,
+        "cart_list_item" : cart_list_item_array,
+        "total" : cart_total
+    }
+    cart_array.push(cart);
+
+    console.log(cart_array)
+    localStorage.setItem("cart_array",JSON.stringify(cart_array));
+
+    let order_id = txt_order_id.innerText;
+
+    let order ={
+        "id" : order_id,
+        "cust_id" : "C0001",
+        "cart_id" : cart_array[cart_array.length-1].id,
+        "total" : cart_array[cart_array.length-1].total,
+        "status" : "Ready to serve"
+    }
+
+    order_array.push(order);
+    console.log(order_array);
+    localStorage.setItem("order_array",JSON.stringify(order_array));
+   
+})
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
