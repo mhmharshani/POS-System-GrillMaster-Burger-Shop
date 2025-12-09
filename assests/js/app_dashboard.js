@@ -73,10 +73,10 @@ function load_cards(category){
             if(item_array[i].name===name){
                 
                 card_container.innerHTML += `<div class="col">
-                        <div class="card h-80" style="max-width: 540px;" id=${"item-card-"+item_array[i].id}>
+                        <div class="card h-100" style="max-width: 540px;" id=${"item-card-"+item_array[i].id}>
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="assests/img/Burger_item.jpg"
+                                    <img src=${item_array[i].item_thumb}
                                         class="img-fluid rounded-start" alt="..." id="item_image">
                                 </div>
                                 <div class="col-md-8">
@@ -288,6 +288,7 @@ function generate_cart_id(){
 
 
 let btn_place_order = document.getElementById("button_place_order");
+let customer_id = "";
 
 btn_place_order.addEventListener("click", e =>{
 
@@ -321,17 +322,96 @@ btn_place_order.addEventListener("click", e =>{
 
     let order ={
         "id" : order_id,
-        "cust_id" : "C0001",
+        "cust_id" : customer_id,
         "cart_id" : cart_array[cart_array.length-1].id,
         "total" : cart_array[cart_array.length-1].total,
-        "status" : "Ready to serve"
+        "status" : "New Order"
     }
 
     order_array.push(order);
     console.log(order_array);
     localStorage.setItem("order_array",JSON.stringify(order_array));
+
+    alert("Order placed successfully. Have a nice meal!");
    
+    load_order_queue();
 })
+
+
+let btn_find_customer = document.getElementById("button_find_customer");
+let dialog_box = document.getElementById("dialog_box_find_customer");
+let btn_search = document.getElementById("search_button");
+let btn_cancel = document.getElementById("cancel_button");
+let current_customer = document.getElementById("current_customer");
+
+btn_find_customer.addEventListener("click", e =>{
+    console.log("clicked search customer");
+    dialog_box.showModal();
+})
+
+btn_search.addEventListener("click", e=>{
+    let customer_data_array = JSON.parse(localStorage.getItem("cust_array"));
+    let phone = document.getElementById("dtxt_phone").value;
+    let isExist=false;
+    customer_data_array.forEach(customer => {
+        if(phone===customer.phone_number){
+            current_customer.innerText=customer.name;
+            customer_id = customer.id;
+            isExist=true;
+        }
+    });
+
+    if(!isExist){
+        alert("No Customer registered on that phone number. Try add new customer.");
+    }
+});
+
+function load_order_queue(){
+    let order_data_array = JSON.parse(localStorage.getItem("order_array"));
+    let order_queue_container = document.getElementById("order_queue_container");
+    
+    order_queue_container.innerHTML = "";
+
+    let size = order_data_array.length;
+        
+    let i=1;
+    
+    while((i<5)&&(size>=i)){
+        let order = order_data_array[size-i];
+                
+        let cust_name = search_customer_name(order.cust_id);
+        order_queue_container.innerHTML += `<div class="col ">
+                        <div class="card order_card" style="width: 14rem;">
+                            <div class="card-body">
+                                <div style="display: flex; justify-content: space-between;">
+                                    <h6 class="card-title" style="font-weight: bold;">${cust_name}</h6>
+                                    <h6>${order.id}</h6>
+                                </div>
+                                <h6 class="card-subtitle mb-2 text-body-secondary" style="font-size: 13px;">2 Items</h6>
+                                <div class="order_status">
+                                    <label for="">${order.status}</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+        i++;
+    
+    }
+}
+
+load_order_queue();
+
+function search_customer_name(cust_id){
+    let name = "Walk-in customer";
+    
+    let customer_data_array = JSON.parse(localStorage.getItem("cust_array"));
+    customer_data_array.forEach(customer => {
+        if(cust_id===customer.id){                
+            name = customer.name;
+        }
+    });
+    return name;
+}
 
 
  

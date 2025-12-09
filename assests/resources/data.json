@@ -25,7 +25,7 @@
         {
             "id": "B1002",
             "name": "Turkey Burger",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Burger_item_4.jpg",
             "category": "Burger",
             "portion": [
                 "Regular"
@@ -43,7 +43,7 @@
         {
             "id": "B1003",
             "name": "Chicken Burger",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Burger_item_3.jpg",
             "category": "Burger",
             "portion": [
                 "Large",
@@ -65,7 +65,7 @@
         {
             "id": "B1004",
             "name": "Cheese Burger",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Burger_item_5.jpg",
             "category": "Burger",
             "portion": [
                 "Large",
@@ -87,7 +87,7 @@
         {
             "id": "B1005",
             "name": "Bacon Burger",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Burger_item_6.jpg",
             "category": "Burger",
             "portion": [
                 "Regular"
@@ -105,7 +105,7 @@
         {
             "id": "B1006",
             "name": "Shawarma Burger",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Burger_item_8.jpg",
             "category": "Burger",
             "portion": [
                 "Regular"
@@ -122,8 +122,8 @@
         },
         {
             "id": "B1007",
-            "name": "Olive Burger",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "name": "Olive Burger_",
+            "item_thumb": "assests/img/Burger_item_9.jpg",
             "category": "Burger",
             "portion": [
                 "Regular"
@@ -141,7 +141,7 @@
         {
             "id": "B1008",
             "name": "Double-Cheese Burger",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Burger_item_1.jpg",
             "category": "Burger",
             "portion": [
                 "Regular"
@@ -159,7 +159,7 @@
         {
             "id": "B1009",
             "name": "Crispy Chicken Burger",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Burger_item_7.jpg",
             "category": "Burger",
             "portion": [
                 "Large",
@@ -181,7 +181,7 @@
         {
             "id": "B1010",
             "name": "Paneer Burger",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Burger_item_4.jpg",
             "category": "Burger",
             "portion": [
                 "Regular"
@@ -199,7 +199,7 @@
         {
             "id": "B1011",
             "name": "Crispy Chicken Submarine",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Submarine_item.jpg",
             "category": "Submarine",
             "portion": [
                 "Large",
@@ -221,7 +221,7 @@
         {
             "id": "B1012",
             "name": "Chicken Submarine",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Submarine_2.jpg",
             "category": "Submarine",
             "portion": [
                 "Large",
@@ -243,7 +243,7 @@
         {
             "id": "B1013",
             "name": "Grinder Submarine",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Submarine_3.jpg",
             "category": "Submarine",
             "portion": [
                 "Regular"
@@ -261,7 +261,7 @@
         {
             "id": "B1014",
             "name": "Cheese Submarine",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Submarine_4.jpg",
             "category": "Submarine",
             "portion": [
                 "Regular"
@@ -279,7 +279,7 @@
         {
             "id": "B1015",
             "name": "Double Cheese n Chicken Submarine",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Submarine_5.jpg",
             "category": "Submarine",
             "portion": [
                 "Regular"
@@ -297,7 +297,7 @@
         {
             "id": "B1016",
             "name": "Special Horgie Submarine",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Submarine_item.jpg",
             "category": "Submarine",
             "portion": [
                 "Regular"
@@ -315,7 +315,7 @@
         {
             "id": "B1017",
             "name": "GrillMaster Special Submarine",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Submarine_item.jpg",
             "category": "Submarine",
             "portion": [
                 "Regular"
@@ -333,7 +333,7 @@
         {
             "id": "B1018",
             "name": "Steak Fries",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Fries_item_1.jpg",
             "category": "Fries",
             "portion": [
                 "Large",
@@ -355,7 +355,7 @@
         {
             "id": "B1019",
             "name": "French Fries",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Fries_item_2.jpg",
             "category": "Fries",
             "portion": [
                 "Large",
@@ -381,7 +381,7 @@
         {
             "id": "B1020",
             "name": "Sweet Potato Fries",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Fries_item_3.jpg",
             "category": "Fries",
             "portion": [
                 "Regular"
@@ -399,7 +399,7 @@
         {
             "id": "B1021",
             "name": "Chicken n Cheese Pasta",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Pasta_item_4.jpg",
             "category": "Pasta",
             "portion": [
                 "Regular"
@@ -417,7 +417,7 @@
         {
             "id": "B1022",
             "name": "Chicken Penne Pasta",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Pasta_item_1.jpg",
             "category": "Pasta",
             "portion": [
                 "Regular"
@@ -435,7 +435,7 @@
         {
             "id": "B1023",
             "name": "Ground Turkey Pasta Bake",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Pasta_item_2.jpg",
             "category": "Pasta",
             "portion": [
                 "Regular"
@@ -453,7 +453,7 @@
         {
             "id": "B1024",
             "name": "Creamy Shrimp Pasta",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Pasta_item_3.jpg",
             "category": "Pasta",
             "portion": [
                 "Regular"
@@ -471,7 +471,7 @@
         {
             "id": "B1025",
             "name": "Lemon Butter Pasta",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Pasta_item_5.jpg",
             "category": "Pasta",
             "portion": [
                 "Regular"
@@ -489,7 +489,7 @@
         {
             "id": "B1026",
             "name": "Tagliatella Pasta",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Pasta_item_7.jpg",
             "category": "Pasta",
             "portion": [
                 "Regular"
@@ -507,7 +507,7 @@
         {
             "id": "B1027",
             "name": "Baked Ravioli Pasta",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Pasta_item_6.jpg",
             "category": "Pasta",
             "portion": [
                 "Regular"
@@ -525,7 +525,7 @@
         {
             "id": "B1028",
             "name": "Fried Chicken",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Chicken_item_2.jpg",
             "category": "Chicken",
             "portion": [
                 "Large",
@@ -551,7 +551,7 @@
         {
             "id": "B1029",
             "name": "Hot Wings",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Chicken_item_4.jpg",
             "category": "Chicken",
             "portion": [
                 "Large"
@@ -569,7 +569,7 @@
         {
             "id": "B1030",
             "name": "Devilled Chicken",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Chicken_item_1.jpg",
             "category": "Chicken",
             "portion": [
                 "Large"
@@ -587,7 +587,7 @@
         {
             "id": "B1031",
             "name": "BBQ Chicken",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Chicken_item_3.jpg",
             "category": "Chicken",
             "portion": [
                 "Regular"
@@ -605,7 +605,7 @@
         {
             "id": "B1032",
             "name": "Pepsi",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Beve_pepsi.jpg",
             "category": "Beverages",
             "portion": [
                 "330ml"
@@ -623,7 +623,7 @@
         {
             "id": "B1033",
             "name": "Coca-Cola",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Beve_cola.jpg",
             "category": "Beverages",
             "portion": [
                 "330ml"
@@ -641,7 +641,7 @@
         {
             "id": "B1034",
             "name": "Sprite",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Beve_sprite.jpg",
             "category": "Beverages",
             "portion": [
                 "330ml"
@@ -659,7 +659,7 @@
         {
             "id": "B1035",
             "name": "Mirinda",
-            "item_thumb": "assests/img/Burger_item.jpg",
+            "item_thumb": "assests/img/Beve_mirinda.jpg",
             "category": "Beverages",
             "portion": [
                 "330ml",

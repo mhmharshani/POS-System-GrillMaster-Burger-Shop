@@ -36,7 +36,7 @@ body{
 .main_area{
     background-color: #F6F6F6;
     width: 74%;
-    /* height: 100vh; */
+    min-height: 100vh;
     margin-left: 6%;
 }
 
@@ -162,7 +162,7 @@ body{
 #button_payment{
     display: flex;
     justify-content: flex-end;
-    margin-top: 20px;
+    margin-top: 5px;
     
 } 
 
@@ -180,4 +180,23 @@ body{
     background-color: #FEFEFE;
     font-size: 14px;
     color: #383F53;
+}
+
+#button_find_customer, #button_new_customer{
+    padding: 5px;
+    background-color: #F6F6F6;
+}
+
+#search_button, #cancel_button{
+    border-radius: 10px;
+    color: #F6F6F6;
+    background-color: #383F53;
+    padding: 2px;
+}
+
+#dialog_box_find_customer{
+    color: #383F53;
+    border-radius: 10px;
+    border: none;
+    
 }
