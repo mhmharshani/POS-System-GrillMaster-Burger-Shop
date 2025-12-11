@@ -78,7 +78,7 @@ body{
 
 .input_area{
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: end;
 }
 

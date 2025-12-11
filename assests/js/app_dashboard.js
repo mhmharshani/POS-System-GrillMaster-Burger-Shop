@@ -39,6 +39,14 @@ async function get_item_data(){
 
 get_item_data();
 
+//-------------------Set Profile name------------------------------
+let profile_name = document.getElementById("profile_name");
+let current_user = JSON.parse(localStorage.getItem("current_user"));
+profile_name.innerText = current_user.user_name;
+
+//-----------------------------------------------------------------
+
+
 let card_container = document.getElementById("item_card_container");
 
 //----------Find item names for one category-----------------
@@ -440,62 +448,6 @@ function search_customer_name(cust_id){
 
 
 
-
-
-
-// const title = clicked_card.querySelector(".card-body p").innerText;
-    // console.log(title);
-    
-
-    // if(localStorage.getItem("recipe_url")!==null){
-    //     localStorage.removeItem("recipe_url");
-    //     url_stored = `https://www.themealdb.com/api/json/v1/1/search.php?s=${title}`;
-    //     localStorage.setItem("recipe_url", url_stored);
-    //     console.log("in card set local storage"+localStorage.getItem("recipe_url"));
-        
-    // }
-
-    // window.location.href = "recipes.html";
-
-//     const clicked_size_dd = event.target.closest("#size_dd");
-//     clicked_size_dd.innerHTML ="";
-
-//     if(clicked_size_dd!=null){
-//         let clicked_card = clicked_size_dd.offsetParent;
-
-//         const name = clicked_card.querySelector(".card-title").innerText;
-//         console.log(name);
-        
-//         item_array.forEach(e =>{
-
-//             if(name === e.name){
-//                 clicked_size_dd.innerHTML += `<option value=${e.size} selected >${e.size}</option>`;
-//             }
-
-//         })
-
-
-//         // clicked_size_dd.innerHTML = 
-//     }
-
-//     console.log(clicked_size_dd);
-
-//-----------------------------------------------
-
-// document.addEventListener('DOMContentLoaded', (event) => {
-//         const carOptions = [
-//             { value: 'audi', text: 'Audi' },
-//             { value: 'bmw', text: 'BMW' }
-//         ];
-//         const selectElement = document.getElementById('car-select');
-
-//         let optionsHtml = '<option value="">--Please choose an option--</option>';
-//         carOptions.forEach(car => {
-//             optionsHtml += `<option value="${car.value}">${car.text}</option>`;
-//         });
-
-//         selectElement.innerHTML = optionsHtml;
-//     });
 
 
 
