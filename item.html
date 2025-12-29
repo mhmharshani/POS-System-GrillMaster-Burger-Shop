@@ -19,10 +19,12 @@
 
                 <img src="assests/img/Logo.png" alt="" class="logo_img">
                 <a href="index.html"><img src="assests/img/icon_home.png" alt="" width="30px" height="30px"></a>
-                <a href="dashboard.html"><img src="assests/img/icon dashboard.png" alt="" width="30px" height="30px"></a>
+                <a href="dashboard.html"><img src="assests/img/icon dashboard.png" alt="" width="30px"
+                        height="30px"></a>
                 <a href="order.html"><img src="assests/img/icon_order.png" alt="" width="30px" height="30px"></a>
                 <a href="customer.html"><img src="assests/img/icon_customer.png" alt="" width="30px" height="30px"></a>
-                <a class="active" href="item.html"><img src="assests/img/icon_product.png" alt="" width="30px" height="30px"></a>
+                <a class="active" href="item.html"><img src="assests/img/icon_product.png" alt="" width="30px"
+                        height="30px"></a>
                 <a href="#"><img src="assests/img/icon_settings.png" alt="" width="30px" height="30px"
                         style="margin-top: 180px;"></a>
                 <a href="index.html"><img src="assests/img/icon_logout.png" alt="" width="30px" height="30px"></a>
@@ -49,36 +51,44 @@
                     <h6>Item Management</h6>
                 </div>
 
-                <div style="display: flex; align-items: center;justify-content: end; margin-top: 15px; margin-bottom: 25px;">
+                <div
+                    style="display: flex; align-items: center;justify-content: end; margin-top: 15px; margin-bottom: 25px;">
                     <div class="input-group mb-3" style="width: 25%; height: 20px;">
-                        <input type="text" class="form-control" placeholder="Search Item" aria-label="Search" aria-describedby="button-addon2" id="txt_search">
-                        <button class="btn" type="button" id="button-addon2"><img src="assests/img/icon_search.png" alt="" width="25px"></button>
+                        <input type="text" class="form-control" placeholder="Search Item" aria-label="Search"
+                            aria-describedby="button-addon2" id="txt_search">
+                        <button class="btn" type="button" id="button-addon2"><img src="assests/img/icon_search.png"
+                                alt="" width="25px"></button>
                     </div>
-                    <button class="btn" type="button" style="height: 40px; margin-left: 5px;" id="button_filter"><img src="assests/img/icon_filter.png" alt="" width="25px"></button>
+                    <button class="btn" type="button" style="height: 40px; margin-left: 5px;" id="button_filter"><img
+                            src="assests/img/icon_filter.png" alt="" width="25px"></button>
+
+                    <button class="btn" type="button" style="height: 40px; margin-left: 5px;" id="button_refresh"><img
+                            src="assests/img/icon_refresh.png" alt="" width="25px"></button>
                 </div>
 
                 <div id="item_table">
                     <div class="table_header">
                         <div class="label_div">
-                            <label for="Item ID"  class="lbl_id" style="flex-basis: 14.285%;">Item ID</label>
-                            <label for="Item Name" class="lbl_name" style="flex-basis: 14.285%;">Item Name</label>
-                             <label for="Category" class="lbl_category" style="flex-basis: 14.285%;">Category</label>
-                            <label for="Item Name" class="lbl_size" style="flex-basis: 14.285%;">Size</label>
-                            <label for="Price" class="lbl_price" style="flex-basis: 14.285%;">Price</label>
-                            <label for="Discount" class="lbl_discount" style="flex-basis: 14.285%;">Discounts</label>
-                            <label for="Stock" class="lbl_stock" style="flex-basis: 14.285%;">Stock</label>
+                            <label for="Item ID" class="lbl_id" style="flex-basis: 10%;">Item ID</label>
+                            <label for="Item Name" class="lbl_name" style="flex-basis: 25%;">Item Name</label>
+                            <label for="Category" class="lbl_category" style="flex-basis: 15%;">Category</label>
+                            <label for="Size" class="lbl_size" style="flex-basis: 15%;">Size</label>
+                            <label for="Price" class="lbl_price" style="flex-basis: 15%;">Price</label>
+                            <label for="Discount" class="lbl_discount" style="flex-basis: 10%;">Discounts</label>
+                            <label for="Stock" class="lbl_stock" style="flex-basis: 10%;">Stock</label>
                         </div>
                         <div class="button_div">
-                            <button class="btn" id="button_add_item"><img src="assests/img/icon_add_new.png" alt="" width="25px"></button>
+                            <button class="btn" id="button_add_item"><img src="assests/img/icon_add_new.png" alt=""
+                                    width="25px"></button>
                         </div>
                     </div>
 
                     <div id="table_data_div">
-                         <!-- Dynamically add table rows here -->
+                        <!-- Dynamically add table rows here -->
 
                     </div>
-                    
-                        
+
+
                 </div>
 
             </div>
@@ -88,41 +98,103 @@
 
     </div>
 
-     <!-- Dialog box to collect item details -->
 
-    <dialog id="dialog_box_item">
-        <h2 style="font-size: 20px; text-align: center; padding-bottom: 10px;">Enter Item Details</h2>
+    <!-- Dialog box to edit/update item details -->
+    <dialog id="dialog_box_edit_item">
+        <h2 style="font-size: 20px; text-align: center; padding-bottom: 10px;">Update Item Details</h2>
         <form method="dialog">
-            <label for="name" id="dlbl_name">Name         :</label>
-            <input type="text" id="dtxt_name" name="name" required style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
-            
-            <label for="category" id="dlbl_category">Category :</label>
-            <input type="text" id="dtxt_category" name="category" required style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+            <label for="name" id="dlbl_name_edit">Name :</label>
+            <input type="text" id="dtxt_name_edit" name="name" required
+                style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
 
-            <label for="size" id="dlbl_size">Size :</label>
-            <input type="text" id="dtxt_size" name="size" required style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+            <label for="category" id="dlbl_category_edit">Category :</label>
+            <input type="text" id="dtxt_category_edit" name="category" required
+                style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
 
-            <label for="price" id="dlbl_price">Price :</label>
-            <input type="text" id="dtxt_price" name="price" required style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+            <label for="size" id="dlbl_size_edit">Size :</label>
+            <input type="text" id="dtxt_size_edit" name="size" required
+                style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
 
-            <label for="discount" id="dlbl_discount">Discounts :</label>
-            <input type="text" id="dtxt_discount" name="discount" required style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+            <label for="price" id="dlbl_price_edit">Price :</label>
+            <input type="text" id="dtxt_price_edit" name="price" required
+                style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
 
-            <label for="stock" id="dlbl_stock">Stock :</label>
-            <input type="text" id="dtxt_stock" name="stock" required style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
-            
+            <label for="discount" id="dlbl_discount_edit">Discounts :</label>
+            <input type="text" id="dtxt_discount_edit" name="discount" required
+                style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+
+            <label for="stock" id="dlbl_stock_edit">Stock :</label>
+            <input type="text" id="dtxt_stock_edit" name="stock" required
+                style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+
             <!-- The button with value="cancel" automatically closes the dialog -->
-             <div style="display: flex; justify-content: end;">
-                <button value="cancel" id="cancel_button">Cancel</button>
-                <button id="save_button" type="submit">Save</button>
-             </div>
-            
+            <div style="display: flex; justify-content: end;">
+                <button value="cancel" id="cancel_button_edit">Cancel</button>
+                <button id="update_button" type="submit">Update</button>
+            </div>
+
         </form>
     </dialog>
 
     <!-- ------------------------------------------ -->
 
+    <!-- Dialog box to collect item details -->
 
+    <dialog id="dialog_box_item">
+        <h2 style="font-size: 20px; text-align: center; padding-bottom: 10px;">Enter Item Details</h2>
+        <form method="dialog">
+            <label for="name" id="dlbl_name">Name :</label>
+            <input type="text" id="dtxt_name" name="name" required
+                style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+
+            <label for="category" id="dlbl_category">Category :</label>
+            <input type="text" id="dtxt_category" name="category" required
+                style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+
+            <label for="size" id="dlbl_size">Size :</label>
+            <input type="text" id="dtxt_size" name="size" required
+                style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+
+            <label for="price" id="dlbl_price">Price :</label>
+            <input type="text" id="dtxt_price" name="price" required
+                style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+
+            <label for="discount" id="dlbl_discount">Discounts :</label>
+            <input type="text" id="dtxt_discount" name="discount" required
+                style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+
+            <label for="stock" id="dlbl_stock">Stock :</label>
+            <input type="text" id="dtxt_stock" name="stock" required
+                style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+
+            <!-- The button with value="cancel" automatically closes the dialog -->
+            <div style="display: flex; justify-content: end;">
+                <button value="cancel" id="cancel_button">Cancel</button>
+                <button id="save_button" type="submit">Save</button>
+            </div>
+
+        </form>
+    </dialog>
+
+    <!-- ------------------------------------------ -->
+
+    <!-- Dialog box for delete confirmation -->
+
+    <dialog id="dialog_box_delete">
+        <form method="dialog">
+            <label for="name" id="confirm_msg">Do you want to delete the selected record?</label><br><br>
+
+            <!-- The button with value="cancel" automatically closes the dialog -->
+            <div style="display: flex; justify-content: end;">
+                <button value="No" id="no_button">No</button>
+                <button id="yes_button" type="submit">Yes</button>
+            </div>
+
+        </form>
+    </dialog>
+
+
+    <!-- ------------------------------------------ -->
 
 
     <!-- <h1>Welcome to DrillMaster Burger Shop</h1> -->

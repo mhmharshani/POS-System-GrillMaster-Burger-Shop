@@ -126,7 +126,7 @@ body{
     width: 10%;
 }
 
-.input_data_div input{
+.input_data_div label{
     background-color: #FEFEFE;
     padding: 5px;
     border-radius: 20px;
@@ -138,10 +138,11 @@ body{
 }
 
 .input_button_div button{
-    background-color: #EDF0F5;
+    background-color: #FEFEFE;
     padding: 5px;
     border-radius: 20px;
-    margin-left: 1px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 /* #txt_id{
@@ -167,7 +168,7 @@ body{
     background-color: #EDF0F5;
 }
 
-#button_filter{
+#button_filter, #button_refresh{
     border: none;
     background-color: #EDF0F5;
 }
