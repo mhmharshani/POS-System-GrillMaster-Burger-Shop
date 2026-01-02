@@ -48,7 +48,7 @@ body{
 .main_area{
     background-color: #F6F6F6;
     width: 94%;
-    height: 100vh;
+    min-height: 100vh;
     margin-left: 6%;
 }
 

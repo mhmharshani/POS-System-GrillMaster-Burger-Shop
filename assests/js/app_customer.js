@@ -104,27 +104,22 @@ btn_cancel.addEventListener("click", e => {
 // Set Current Date and Time
 function update_date_time(){
     const now = new Date();
-    document.getElementById("date_time").textContent = now
+    const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        hour12: false 
+    };
+    document.getElementById("date_time").textContent = now.toLocaleString('en-US', options);
 }
 
 update_date_time();
 setInterval(update_date_time,1000);
 
 // ----------------------------
-
-
-// const inputField = document.getElementById('myInput');
-
-// // Make the input editable when it is clicked/focused
-// inputField.addEventListener('click', function() {
-//     // Remove the readonly attribute
-//     this.removeAttribute('readonly'); 
-// });
-
-// // Make the input non-editable (readonly) when it loses focus (blurs)
-// inputField.addEventListener('blur', function() {
-//     // Add the readonly attribute back
-//     this.setAttribute('readonly', 'readonly');
-// });
 
 

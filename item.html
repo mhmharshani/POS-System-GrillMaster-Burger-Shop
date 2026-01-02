@@ -32,16 +32,17 @@
             </div>
 
             <div class="main_area">
-                <div class="date_time_area">
-                    <div>
+                <div class="row ">
+                    <div class="col-6">
                         <h5 style="margin-top: 32px;">WELCOME GRILLMASTER</h5>
                     </div>
-                    <div style="margin-top: 15px;">
+                    <div class="col-6" style="margin-top: 15px;" id="date_time_area">
 
-                        <label for="" style="font-size: 14px;">Monday, November 24 2025 </label>
-                        <label for="" style="font-size: 14px;">20:23:00</label>
-                        <button class="btn" type="button" style="margin-top: 5px; margin-left: 10px;"
+                        <label for="" style="font-size: 14px;" id="date_time">Monday, November 24 2025 </label>
+                        <!-- <label for="" style="font-size: 14px;">20:23:00</label> -->
+                        <button class="btn" type="button" style="height: 40px; margin-top: 0px; margin-left: 10px;"
                             id="button_profile"><img src="assests/img/icon_profile.png" alt="" width="35px"></button>
+                        <h6 style="margin-top: 12px;" id="profile_name">Hello</h6>
 
                     </div>
 
@@ -84,6 +85,7 @@
                     </div>
 
                     <div id="table_data_div">
+                        
                         <!-- Dynamically add table rows here -->
 
                     </div>
@@ -195,6 +197,55 @@
 
 
     <!-- ------------------------------------------ -->
+
+    <!-- -----------------modal box for filter-------------- -->
+
+    <div class="modal" tabindex="-1" role="dialog" id="dialog_box_filter">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Select Filters</h5>
+            </div>
+            <div class="modal-body">
+                <div class="filters">
+                    <label><input type="checkbox" id="filter_category" value="Category" onchange="filterItems()"> Category</label>
+                    <label><input type="checkbox" id="filter_price" value="Price" onchange="filterItems()"> Price</label>
+                    <label><input type="checkbox" id="filter_stock" value="Stock" onchange="filterItems()"> Stock</label>
+                    <label><input type="checkbox" id="filter_discount" value="Discount" onchange="filterItems()"> Discounted Items</label>
+                </div>
+                <div id="category_div" style="display: none;">
+                    <select class="form-select" aria-label="Default select example" style="width: 50%;" id="category_dd">
+                        <option value="0" selected>Select Category</option>
+                        <option value="Burger">Burger</option>
+                        <option value="Submarine">Submarine</option>
+                        <option value="Pasta">Pasta</option>
+                        <option value="Fries">Fries</option>
+                        <option value="Chicken">Chicken</option>
+                        <option value="Beverages">Beverages</option>
+                    </select>
+                </div>
+                <div id="price_div" style="display: none;">
+                    <label for="title_price">Price Range : </label>
+                    <label for="price_min">Min : </label>
+                    <input type="number" id="price_min" name="price_min" min="100" max="5000" value="100">
+                    <label for="price_max">Max : </label>
+                    <input type="number" id="price_max" name="price_max" min="100" max="5000" value="5000">
+                </div>
+                <div id="stock_div" style="display: none;">
+                    <label for="title_stock">Stock Range : </label>
+                    <label for="price_min">Min : </label>
+                    <input type="number" id="stock_min" name="stock_min" min="0" max="500" value="0">
+                    <label for="price_max">Max : </label>
+                    <input type="number" id="stock_max" name="stock_max" min="0" max="500" value="500">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="button_apply_filter">Apply</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="button_close_filter">Close</button>
+            </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- <h1>Welcome to DrillMaster Burger Shop</h1> -->

@@ -42,3 +42,23 @@ function init_load_table(){
 
 init_load_table();
 
+// Set Current Date and Time
+function update_date_time(){
+    const now = new Date();
+    const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        hour12: false 
+    };
+    document.getElementById("date_time").textContent = now.toLocaleString('en-US', options);
+}
+
+update_date_time();
+setInterval(update_date_time,1000);
+
+// ----------------------------
