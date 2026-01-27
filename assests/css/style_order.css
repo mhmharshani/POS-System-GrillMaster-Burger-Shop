@@ -163,12 +163,8 @@ body{
     font-size: 14px;
 }
 
-#button-addon2{
+#button-addon2, #button_filter, #button_refresh{
     border: none;
     background-color: #EDF0F5;
 }
 
-#button_filter{
-    border: none;
-    background-color: #EDF0F5;
-}

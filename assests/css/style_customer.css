@@ -167,13 +167,12 @@ body{
     background-color: #EDF0F5;
 }
 
-#button_filter{
+#button_filter, #button_refresh{
     border: none;
     background-color: #EDF0F5;
 }
 
-
-#dialog_box_customer {
+.dialog_box_modal {
     background-color: #EDF0F5;
     padding: 20px;
     border: 1px solid #ccc;
@@ -183,11 +182,11 @@ body{
     /* A backdrop pseudo-element covers the rest of the screen when open */
 }
 
-#dialog_box_customer::backdrop {
+.dialog_box_modal::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-#dialog_box_customer form div button{
+.dialog_box_modal form div button{
     border-radius:8px; 
     border: #383F53 solid 1px; 
     background-color: #F8F8F8;
@@ -195,3 +194,4 @@ body{
     color: #383F53;
     margin-left: 10px;
 }
+

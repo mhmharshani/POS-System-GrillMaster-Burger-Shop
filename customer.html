@@ -55,6 +55,8 @@
                         <button class="btn" type="button" id="button-addon2"><img src="assests/img/icon_search.png" alt="" width="25px"></button>
                     </div>
                     <button class="btn" type="button" style="height: 40px; margin-left: 5px;" id="button_filter"><img src="assests/img/icon_filter.png" alt="" width="25px"></button>
+                    <button class="btn" type="button" style="height: 40px; margin-left: 5px;" id="button_refresh"><img
+                            src="assests/img/icon_refresh.png" alt="" width="25px"></button>
                 </div>
 
                 <div id="customer_table">
@@ -83,14 +85,14 @@
 
     <!-- Dialog box to collect customer details -->
 
-    <dialog id="dialog_box_customer">
+    <dialog id="dialog_box_customer" class="dialog_box_modal">
         <h2 style="font-size: 20px; text-align: center; padding-bottom: 10px;">Enter Customer Details</h2>
         <form method="dialog">
             <label for="name" id="dlbl_name">Name         :</label>
             <input type="text" id="dtxt_name" name="name" required style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
             
             <label for="phone_no" id="dlbl_phone">Phone Number :</label>
-            <input type="phone_number" id="dtxt_phone" name="phonr_number" required style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+            <input type="text" id="dtxt_phone" name="phonr_number" required style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
             
             <!-- The button with value="cancel" automatically closes the dialog -->
              <div style="display: flex; justify-content: end;">
@@ -98,6 +100,47 @@
                 <button id="save_button" type="submit">Save</button>
              </div>
             
+        </form>
+    </dialog>
+
+
+    <!-- ------------------------------------------ -->
+
+        <!-- Dialog box to edit/update item details -->
+    <dialog id="dialog_box_edit_customer" class="dialog_box_modal">
+        <h2 style="font-size: 20px; text-align: center; padding-bottom: 10px;">Update Customer Details</h2>
+        <form method="dialog">
+            <label for="name" id="dlbl_name_edit">Name :</label>
+            <input type="text" id="dtxt_name_edit" name="name" required
+                style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+
+            <label for="phone" id="dlbl_phone_edit">Phone Number :</label>
+            <input type="text" id="dtxt_phone_edit" name="phone" required
+                style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+
+            <!-- The button with value="cancel" automatically closes the dialog -->
+            <div style="display: flex; justify-content: end;">
+                <button value="cancel" id="cancel_button_edit">Cancel</button>
+                <button id="update_button" type="submit">Update</button>
+            </div>
+
+        </form>
+    </dialog>
+
+    <!-- ------------------------------------------ -->
+
+    <!-- Dialog box for delete confirmation -->
+
+    <dialog id="dialog_box_delete" class="dialog_box_modal">
+        <form method="dialog">
+            <label for="name" id="confirm_msg">Do you want to delete the selected record?</label><br><br>
+
+            <!-- The button with value="cancel" automatically closes the dialog -->
+            <div style="display: flex; justify-content: end;">
+                <button value="No" id="no_button">No</button>
+                <button id="yes_button" type="submit">Yes</button>
+            </div>
+
         </form>
     </dialog>
 
