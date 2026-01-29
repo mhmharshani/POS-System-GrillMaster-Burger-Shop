@@ -127,7 +127,7 @@ body{
     width: 10%;
 }
 
-.input_data_div input{
+.input_data_div label{
     background-color: #FEFEFE;
     padding: 5px;
     border-radius: 20px;
@@ -167,4 +167,44 @@ body{
     border: none;
     background-color: #EDF0F5;
 }
+
+.dialog_box_modal {
+    background-color: #EDF0F5;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    color: #383F53;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* A backdrop pseudo-element covers the rest of the screen when open */
+}
+
+.dialog_box_modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dialog_box_modal form div button{
+    border-radius:8px; 
+    border: #383F53 solid 1px; 
+    background-color: #F8F8F8;
+    padding: 5px;
+    color: #383F53;
+    margin-left: 10px;
+}
+
+#status_div,#total_div{
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.modal-footer button{
+    background-color: #383F53;
+    color: #F6F6F6;
+    border-radius: 10px;
+    border: none;
+}
+
+.filters label{
+    margin-right: 10px;
+}
+
 

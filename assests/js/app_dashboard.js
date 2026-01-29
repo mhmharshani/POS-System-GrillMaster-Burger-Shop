@@ -333,7 +333,8 @@ btn_place_order.addEventListener("click", e =>{
         "cust_id" : customer_id,
         "cart_id" : cart_array[cart_array.length-1].id,
         "total" : cart_array[cart_array.length-1].total,
-        "status" : "New Order"
+        "status" : "New Order",
+        "is_active" : true
     }
 
     order_array.push(order);
@@ -343,6 +344,7 @@ btn_place_order.addEventListener("click", e =>{
     alert("Order placed successfully. Have a nice meal!");
    
     load_order_queue();
+    window.location.reload();
 })
 
 

@@ -27,9 +27,9 @@ function init_load_table() {
                 if (customer.is_active) {
                     customer_table.innerHTML += `<div class="table_data" id=${customer.id}>
                             <div class="input_data_div">
-                                <input type="text" id="txt_id" style="flex-basis: 33%;" value=${customer.id} readonly >
-                                <input type="text" id="txt_name" style="flex-basis: 33%;" value=${customer.name} readonly >
-                                <input type="text" id="txt_phone" style="flex-basis: 33%;" value=${customer.phone_number} readonly>
+                                <label for="Customer ID"  class="txt_id" style="flex-basis: 33%;">${customer.id}</label>
+                                <label for="Customer Name" class="txt_name" style="flex-basis: 33%;">${customer.name}</label>
+                                <label for="Phone Number" class="txt_phone" style="flex-basis: 33%;">${customer.phone_number}</label>
                             </div>
                             <div class="input_button_div">
                                 <button class="btn"><img src="assests/img/icon_edit.png" alt="" width="25px" id="img_edit"></button>
@@ -85,9 +85,9 @@ btn_save.addEventListener('click', (event) => {
 
     customer_table.innerHTML += `<div class="table_data" id=${id}>
                         <div class="input_data_div">
-                            <input type="text" id="txt_id" style="flex-basis: 33%;" value=${id} readonly >
-                            <input type="text" id="txt_name" style="flex-basis: 33%;" value=${name} readonly >
-                            <input type="text" id="txt_phone" style="flex-basis: 33%;" value=${phone_no} readonly>
+                            <label for="Customer ID"  class="txt_id" style="flex-basis: 33%;">${customer.id}</label>
+                                <label for="Customer Name" class="txt_name" style="flex-basis: 33%;">${customer.name}</label>
+                                <label for="Phone Number" class="txt_phone" style="flex-basis: 33%;">${customer.phone_number}</label>
                         </div>
                         <div class="input_button_div">
                             <button class="btn"><img src="assests/img/icon_edit.png" alt="" width="25px" id="img_edit"></button>
@@ -130,7 +130,7 @@ setInterval(update_date_time, 1000);
 let table_data_container = document.getElementById("table_data_div");
 
 let dialog_box_delete = document.getElementById("dialog_box_delete");
-let btn_yes = document.getElementById("yes_button");
+let btn_yes = document.getElementById("yes_delete_button");
 
 let dialog_box_edit = document.getElementById("dialog_box_edit_customer");
 let btn_update = document.getElementById("update_button");
@@ -232,16 +232,18 @@ btn_search.addEventListener("click", e => {
 
     let is_customer_exist = false;
 
+    customer_table.innerHTML ="";
+
     for (const customer of cust_array) {
 
         if ((txt === customer.id.toLowerCase()) || (txt === customer.name.toLowerCase()) || (txt === customer.phone_number)) {
             is_customer_exist = true;
             if (customer.is_active) {
-                customer_table.innerHTML = `<div class="table_data" id=${customer.id}>
+                customer_table.innerHTML += `<div class="table_data" id=${customer.id}>
                             <div class="input_data_div">
-                                <input type="text" id="txt_id" style="flex-basis: 33%;" value=${customer.id} readonly >
-                                <input type="text" id="txt_name" style="flex-basis: 33%;" value=${customer.name} readonly >
-                                <input type="text" id="txt_phone" style="flex-basis: 33%;" value=${customer.phone_number} readonly>
+                                <label for="Customer ID"  class="txt_id" style="flex-basis: 33%;">${customer.id}</label>
+                                <label for="Customer Name" class="txt_name" style="flex-basis: 33%;">${customer.name}</label>
+                                <label for="Phone Number" class="txt_phone" style="flex-basis: 33%;">${customer.phone_number}</label>
                             </div>
                             <div class="input_button_div">
                                 <button class="btn"><img src="assests/img/icon_edit.png" alt="" width="25px" id="img_edit"></button>
@@ -252,11 +254,12 @@ btn_search.addEventListener("click", e => {
             else {
                 alert("customer is no longer in active state");
             }
-            break;
+            // break;
         }
     }
 
     if (!is_customer_exist) {
+        init_load_table();
         alert("No such registered customer");
     }
 });

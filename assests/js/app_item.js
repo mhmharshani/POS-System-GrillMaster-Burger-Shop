@@ -125,18 +125,18 @@ btn_save.addEventListener('click', (event) => {
         item_table.innerHTML += `<div class="table_data" id=${id}>
                             <div class="input_data_div">
                                 <label for="Item ID"  class="txt_id" style="flex-basis: 10%;">${id}</label>
-                            <label for="Item Name" class="txt_name" style="flex-basis: 25%;">${name}</label>
-                            <label for="Category" class="txt_category" style="flex-basis: 15%;">${category}</label>
-                            <label for="Size" class="txt_size" style="flex-basis: 15%;">${size}</label>
-                            <label for="Price" class="txt_price" style="flex-basis: 15%;">${price}</label>
-                            <label for="Discount" class="txt_discount" style="flex-basis: 10%;">${discount}</label>
-                            <label for="Stock" class="txt_stock" style="flex-basis: 10%;">${stock}</label>
-                            </div>
-                            <div class="input_button_div">
-                                <button class="btn" id="button_edit"><img id="img_edit" src="assests/img/icon_edit.png" alt="" width="25px"></button>
-                                <button class="btn" id="button_delete"><img src="assests/img/icon_delete.png" alt="" width="25px"></button>
-                            </div>
-                        </div>`;
+                                <label for="Item Name" class="txt_name" style="flex-basis: 25%;">${name}</label>
+                                <label for="Category" class="txt_category" style="flex-basis: 15%;">${category}</label>
+                                <label for="Size" class="txt_size" style="flex-basis: 15%;">${size}</label>
+                                <label for="Price" class="txt_price" style="flex-basis: 15%;">${price}</label>
+                                <label for="Discount" class="txt_discount" style="flex-basis: 10%;">${discount}</label>
+                                <label for="Stock" class="txt_stock" style="flex-basis: 10%;">${stock}</label>
+                                </div>
+                                <div class="input_button_div">
+                                    <button class="btn" id="button_edit"><img id="img_edit" src="assests/img/icon_edit.png" alt="" width="25px"></button>
+                                    <button class="btn" id="button_delete"><img src="assests/img/icon_delete.png" alt="" width="25px"></button>
+                                </div>
+                            </div>`;
     }
 
     dialog_box.close();
@@ -317,6 +317,9 @@ btn_refresh.addEventListener("click", e => {
 
 });
 
+
+//--------------------Filter------------------------------------------
+
 let btn_filter = document.getElementById("button_filter");
 let dialog_box_filter = document.getElementById("dialog_box_filter");
 const dialog_box_filter_object = new bootstrap.Modal(dialog_box_filter);
@@ -463,7 +466,10 @@ function reset_filter_dialog_box(){
     });
 }
 
-// Set Current Date and Time
+//----------------------------------------------------------------------------
+
+//----------------- Set Current Date and Time--------------------
+
 function update_date_time(){
     const now = new Date();
     const options = {

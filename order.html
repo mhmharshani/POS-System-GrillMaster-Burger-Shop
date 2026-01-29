@@ -23,7 +23,7 @@
                         height="30px"></a>
                 <a class="active" href="order.html"><img src="assests/img/icon_order.png" alt="" width="30px"
                         height="30px"></a>
-                <a href="customer.html"><img src="assests/img/icon_customer.png" alt="" width="30px" height="30px"></a>
+                <a href="customer.html"><img src="assests/img/icon_customer_2.png" alt="" width="30px" height="30px"></a>
                 <a href="item.html"><img src="assests/img/icon_product.png" alt="" width="30px" height="30px"></a>
                 <a href="#"><img src="assests/img/icon_settings.png" alt="" width="30px" height="30px"
                         style="margin-top: 180px;"></a>
@@ -75,11 +75,14 @@
                             <label for="Status" class="lbl_status" style="flex-basis: 20%;">Status</label>
                         </div>
                         <div class="button_div">
-                            <button class="btn"><img src="assests/img/icon_add_new.png" alt="" width="25px"></button>
+                            <button class="btn"><img src="assests/img/icon_add_new.png" alt="" width="25px" id="button_add_order"></button>
                         </div>
                     </div>
-
-                    <!-- Dynamically add table rows here -->
+                    <div id="table_data_div">
+                        <!-- <input type="text" id="txt_id" value=${order.id} readonly> -->
+                         <!-- Dynamically add table rows here -->
+                    </div>
+                    
                 </div>
 
             </div>
@@ -89,9 +92,104 @@
 
     </div>
 
+    <!-- Dialog box for confirmation to place a order -->
 
+    <dialog id="dialog_box_add" class="dialog_box_modal">
+        <form method="dialog">
+            <label for="name" id="confirm_msg">Do you want to place a order?</label><br><br>
 
+            <!-- The button with value="cancel" automatically closes the dialog -->
+            <div style="display: flex; justify-content: end;">
+                <button value="No" id="no_add_button">No</button>
+                <button id="yes_add_button" type="submit" onclick="window.location.href='dashboard.html'">Yes</button>
+            </div>
 
+        </form>
+    </dialog>
+
+    <!-- ------------------------------------------ -->
+
+    <!-- Dialog box for delete confirmation -->
+
+    <dialog id="dialog_box_delete" class="dialog_box_modal">
+        <form method="dialog">
+            <label for="name" id="confirm_msg">Do you want to cancel/delete the order?</label><br><br>
+
+            <!-- The button with value="cancel" automatically closes the dialog -->
+            <div style="display: flex; justify-content: end;">
+                <button value="No" id="no_delete_button">No</button>
+                <button id="yes_delete_button" type="submit">Yes</button>
+            </div>
+
+        </form>
+    </dialog>
+
+    <!-- ------------------------------------------ -->
+
+    <!-- Dialog box to update order details -->
+    <dialog id="dialog_box_edit_order" class="dialog_box_modal">
+        <h2 style="font-size: 20px; text-align: center; padding-bottom: 10px;">Update Order Details</h2>
+        <form method="dialog">
+            <label for="id" id="dlbl_id_edit">Order ID : </label><br>
+            <input type="text" id="dtxt_id_edit" name="id" required
+                style="border-radius:8px; border: none; background-color: #F8F8F8;" readonly><br><br>
+
+            <label for="status" id="dlbl_status_edit">Status :</label><br>
+            <input type="text" id="dtxt_status_edit" name="Status" required
+                style="border-radius:8px; border: none; background-color: #F8F8F8;"><br><br>
+
+            <!-- The button with value="cancel" automatically closes the dialog -->
+            <div style="display: flex; justify-content: end;">
+                <button value="cancel" id="cancel_button_edit">Cancel</button>
+                <button id="update_button" type="submit">Update</button>
+            </div>
+
+        </form>
+    </dialog>
+
+    <!-- ------------------------------------------ -->
+
+    <!-- -----------------modal box for filter-------------- -->
+
+    <div class="modal" tabindex="-1" role="dialog" id="dialog_box_filter">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Select Filters</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="filters">
+                        <label><input type="checkbox" id="filter_status" value="Status" onchange="filterOrders()"> Status</label>
+                        <label><input type="checkbox" id="filter_total" value="Total" onchange="filterOrders()"> Bill Amount</label>
+                        <label><input type="checkbox" id="filter_deleted" value="Deleted" onchange="filterOrders()"> Deleted Orders</label>
+                    </div>
+                    <div id="status_div" style="display: none;">
+                        <select class="form-select" aria-label="Default select example" style="width: 50%;" id="status_dd">
+                            <option value="0" selected>Select Status</option>
+                            <option value="New Order">New Order</option>
+                            <option value="In Preparation">In Preparaton</option>
+                            <option value="Ready to Serve">Ready to Serve</option>
+                            <option value="Served">Served</option>
+                            <option value="Canceled">Canceled</option>
+                        </select>
+                    </div>
+                    <div id="total_div" style="display: none;">
+                        <label for="title_total">Bill Amount Range : </label>
+                        <label for="total_min">Min : </label>
+                        <input type="number" id="total_min" name="total_min" min="100" max="50000" value="100">
+                        <label for="total_max">Max : </label>
+                        <input type="number" id="total_max" name="total_max" min="100" max="50000" value="50000">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="button_apply_filter">Apply</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="button_close_filter">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
     <!-- <h1>Welcome to DrillMaster Burger Shop</h1> -->
 
 

@@ -126,7 +126,7 @@ body{
     width: 20%;
 }
 
-.input_data_div input{
+.input_data_div label{
     background-color: #FEFEFE;
     padding: 5px;
     border-radius: 20px;
